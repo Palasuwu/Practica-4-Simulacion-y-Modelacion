@@ -1,0 +1,6 @@
+.memsearch/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+.streamlit/secrets.toml
