@@ -9,7 +9,9 @@ from grafo import BODEGA, DESTINOS
 
 COLOR_DOBLE = "#9aa5b1"
 COLOR_UNICO = "#e8833a"
-COLOR_RUTAS = ["#2563eb", "#16a34a", "#dc2626", "#9333ea"]
+COLOR_RUTAS = ["#1f3a5f", "#3f8f6b", "#b5473a", "#8a6bb0"]
+COLORES_POLITICA = {"Rutas actuales": "#a3a3a3", "Rutas Dijkstra": "#1f3a5f"}
+PLANTILLA = "simple_white"
 
 
 def posiciones(g_base: nx.DiGraph) -> dict:
@@ -68,7 +70,7 @@ def figura_grafo(g: nx.DiGraph, pos: dict, rutas: dict[str, list[str]] | None = 
                                     arrowhead=2, arrowsize=1, arrowwidth=2.5, arrowcolor=color,
                                     standoff=11, opacity=0.9))
 
-    colores = ["#111827" if n == BODEGA else "#dc2626" if n in DESTINOS else "#e2e8f0" for n in g.nodes]
+    colores = ["#1f2328" if n == BODEGA else "#b5473a" if n in DESTINOS else "#e2e8f0" for n in g.nodes]
     texto = ["white" if n == BODEGA or n in DESTINOS else "#0f172a" for n in g.nodes]
     fig.add_trace(go.Scatter(
         x=[pos[n][0] for n in g.nodes], y=[pos[n][1] for n in g.nodes], mode="markers+text",
@@ -97,8 +99,8 @@ def figura_cola(df: pd.DataFrame, horas: float, titulo: str) -> go.Figure:
     tc, yc = escalon([(r.Llegada, 1) for r in df.itertuples()] + [(r.Salida, -1) for r in df.itertuples()])
     tv, yv = escalon([(r.Salida, 1) for r in df.itertuples()] + [(r.Regreso, -1) for r in df.itertuples()])
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=tc, y=yc, line_shape="hv", name="Pedidos en cola"))
-    fig.add_trace(go.Scatter(x=tv, y=yv, line_shape="hv", name="Vehículos en ruta"))
+    fig.add_trace(go.Scatter(x=tc, y=yc, line_shape="hv", name="Pedidos en cola", line=dict(color="#b5473a")))
+    fig.add_trace(go.Scatter(x=tv, y=yv, line_shape="hv", name="Vehículos en ruta", line=dict(color="#1f3a5f")))
     fig.add_vline(x=horas * 60, line_dash="dash", line_color="gray", annotation_text="cierre de recepción")
     fig.update_layout(title=titulo, xaxis_title="minuto de la jornada", yaxis_title="cantidad",
                       height=320, margin=dict(l=10, r=10, t=40, b=10), legend=dict(orientation="h", y=-0.3))

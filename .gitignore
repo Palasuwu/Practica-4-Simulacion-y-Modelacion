@@ -4,3 +4,7 @@ __pycache__/
 .venv/
 .DS_Store
 .streamlit/secrets.toml
+
+# Informe (se entrega por separado)
+informe.tex
+informe.pdf
