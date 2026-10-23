@@ -1,0 +1,25 @@
+Destino,Sentido,Algoritmo,Tiempo,Trabajo,Ruta
+N08,Ida,Dijkstra,51.0,39,N01 → N09 → N10 → N11 → N13 → N22 → N23 → N07 → N08
+N08,Ida,A*,51.0,28,N01 → N09 → N10 → N11 → N13 → N22 → N23 → N07 → N08
+N08,Ida,Bellman-Ford,51.0,432,N01 → N09 → N10 → N11 → N13 → N22 → N23 → N07 → N08
+N08,Regreso,Dijkstra,59.0,40,N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01
+N08,Regreso,A*,59.0,32,N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01
+N08,Regreso,Bellman-Ford,59.0,1008,N08 → N07 → N06 → N05 → N12 → N03 → N02 → N01
+N19,Ida,Dijkstra,18.0,9,N01 → N02 → N18 → N19
+N19,Ida,A*,18.0,5,N01 → N02 → N18 → N19
+N19,Ida,Bellman-Ford,18.0,432,N01 → N02 → N18 → N19
+N19,Regreso,Dijkstra,24.0,21,N19 → N18 → N10 → N09 → N01
+N19,Regreso,A*,24.0,7,N19 → N18 → N10 → N09 → N01
+N19,Regreso,Bellman-Ford,24.0,720,N19 → N18 → N10 → N09 → N01
+N34,Ida,Dijkstra,24.0,15,N01 → N17 → N26 → N34
+N34,Ida,A*,24.0,7,N01 → N17 → N26 → N34
+N34,Ida,Bellman-Ford,24.0,432,N01 → N17 → N26 → N34
+N34,Regreso,Dijkstra,34.0,26,N34 → N26 → N25 → N17 → N09 → N01
+N34,Regreso,A*,34.0,8,N34 → N26 → N25 → N17 → N09 → N01
+N34,Regreso,Bellman-Ford,34.0,864,N34 → N26 → N25 → N17 → N09 → N01
+N40,Ida,Dijkstra,47.0,37,N01 → N17 → N25 → N27 → N29 → N31 → N32 → N40
+N40,Ida,A*,47.0,18,N01 → N17 → N25 → N27 → N29 → N31 → N32 → N40
+N40,Ida,Bellman-Ford,47.0,432,N01 → N17 → N25 → N27 → N29 → N31 → N32 → N40
+N40,Regreso,Dijkstra,61.0,40,N40 → N32 → N31 → N29 → N27 → N11 → N10 → N09 → N01
+N40,Regreso,A*,61.0,39,N40 → N32 → N31 → N29 → N27 → N11 → N10 → N09 → N01
+N40,Regreso,Bellman-Ford,61.0,1296,N40 → N32 → N31 → N29 → N27 → N11 → N10 → N09 → N01

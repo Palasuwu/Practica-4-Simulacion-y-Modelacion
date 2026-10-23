@@ -1,0 +1,6 @@
+,Entregas puntuales,Entregas puntuales,Entregas puntuales,% puntual,% puntual,% puntual,Espera promedio,Espera promedio,Espera promedio,Solicitud→entrega promedio,Solicitud→entrega promedio,Solicitud→entrega promedio,Utilización,Utilización,Utilización,Tiempo adicional,Tiempo adicional,Tiempo adicional
+,mean,min,max,mean,min,max,mean,min,max,mean,min,max,mean,min,max,mean,min,max
+Escenario,,,,,,,,,,,,,,,,,,
+Normal,13.9,2.0,33.0,40.6,8.3,75.0,-16.4,-54.7,0.0,-37.9,-75.3,-14.8,-12.2,-19.2,-7.6,-92.3,-167.8,-8.0
+Semana Santa,21.6,6.0,38.0,46.7,17.2,84.4,-61.2,-97.7,-2.2,-83.1,-118.7,-19.4,-5.9,-8.9,-1.9,-201.7,-264.8,-78.0
+Navidad,11.0,4.0,21.0,14.2,5.4,33.3,-149.1,-183.0,-75.7,-170.7,-206.4,-93.9,-1.8,-7.7,3.1,-354.8,-455.1,-175.4

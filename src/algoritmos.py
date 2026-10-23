@@ -10,6 +10,8 @@ from collections import deque
 
 import networkx as nx
 
+from grafo import RUTAS_ACTUALES
+
 INF = float("inf")
 
 
@@ -147,3 +149,22 @@ def reparar_ruta(g: nx.DiGraph, ruta: list[str]) -> list[str]:
                 return []
             nueva.extend(desvio[1:])
     return nueva
+
+
+def alternativas_destino(g: nx.DiGraph, destino: str, origen: str = "N01",
+                         ruta_actual: list[str] | None = None) -> list[tuple[str, list[str], list[str]]]:
+    """Candidatas para comparar: la ruta actual (regreso invertido), la óptima de Dijkstra y la
+    2.ª y 3.ª más cortas de Yen, todas con ida y regreso calculados por separado para que el
+    regreso sea siempre válido aunque haya calles de un solo sentido."""
+    actual = ruta_actual or RUTAS_ACTUALES[destino]
+    idas = [p for p in rutas_alternativas(g, origen, destino, 4) if p != actual]
+    regresos = [p for p in rutas_alternativas(g, destino, origen, 4) if p != actual[::-1]]
+    ida_d, reg_d = dijkstra(g, origen, destino)[0], dijkstra(g, destino, origen)[0]
+    idas = [p for p in idas if p != ida_d]
+    regresos = [p for p in regresos if p != reg_d]
+    candidatas = [("Actual (hoja de despacho)", actual, actual[::-1]),
+                  ("Dijkstra (óptima)", ida_d, reg_d)]
+    for k, nombre in enumerate(["2.ª más corta (Yen)", "3.ª más corta (Yen)"]):
+        if k < len(idas) and k < len(regresos):
+            candidatas.append((nombre, idas[k], regresos[k]))
+    return candidatas

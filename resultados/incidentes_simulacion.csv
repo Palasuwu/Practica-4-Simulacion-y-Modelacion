@@ -1,0 +1,9 @@
+Incidente,Política,Pedidos,Entregas puntuales,% puntual,Espera promedio,Solicitud→entrega promedio,Utilización,Tiempo adicional
+Red original,Rutas Dijkstra,31.9,31.1,97.6,3.0,37.1,54.6,86.8
+Red original,Rutas actuales,31.9,17.2,57.0,19.4,75.0,66.8,179.1
+Congestión N01→N17 (8→25 min),Rutas Dijkstra,31.9,31.0,97.4,3.2,39.0,55.4,91.0
+Congestión N01→N17 (8→25 min),Rutas actuales,31.9,17.2,57.0,19.4,75.0,66.8,179.1
+Cierre N29↔N31,Rutas Dijkstra,31.9,30.9,97.0,3.3,39.8,55.7,93.0
+Cierre N29↔N31,Rutas actuales,31.9,17.2,57.0,19.4,75.0,66.8,179.1
+Cierre N05↔N06,Rutas Dijkstra,31.9,31.1,97.6,3.2,37.3,55.0,88.0
+Cierre N05↔N06,Rutas actuales,31.9,16.3,54.3,22.9,81.4,67.8,197.6

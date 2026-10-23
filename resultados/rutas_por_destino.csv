@@ -1,0 +1,17 @@
+Destino,Alternativa,Ida,Tiempo ida,Regreso,Tiempo regreso,Ciclo,Ida invertida válida,Puntual sin espera
+N08,Actual (hoja de despacho),N01 → N02 → N03 → N04 → N05 → N06 → N07 → N08,59.0,N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,59.0,118.0,True,True
+N08,Dijkstra (óptima),N01 → N09 → N10 → N11 → N13 → N22 → N23 → N07 → N08,51.0,N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,59.0,110.0,False,True
+N08,2.ª más corta (Yen),N01 → N02 → N03 → N11 → N13 → N22 → N23 → N07 → N08,52.0,N08 → N07 → N06 → N05 → N12 → N03 → N02 → N01,59.0,111.0,False,True
+N08,3.ª más corta (Yen),N01 → N09 → N10 → N11 → N13 → N22 → N23 → N16 → N08,54.0,N08 → N07 → N23 → N22 → N29 → N27 → N11 → N10 → N09 → N01,62.0,116.0,False,True
+N19,Actual (hoja de despacho),N01 → N02 → N03 → N11 → N19,33.0,N19 → N11 → N03 → N02 → N01,33.0,66.0,True,True
+N19,Dijkstra (óptima),N01 → N02 → N18 → N19,18.0,N19 → N18 → N10 → N09 → N01,24.0,42.0,False,True
+N19,2.ª más corta (Yen),N01 → N17 → N18 → N19,20.0,N19 → N18 → N17 → N09 → N01,27.0,47.0,False,True
+N19,3.ª más corta (Yen),N01 → N09 → N10 → N18 → N19,24.0,N19 → N11 → N10 → N09 → N01,32.0,56.0,True,True
+N34,Actual (hoja de despacho),N01 → N09 → N17 → N25 → N33 → N34,42.0,N34 → N33 → N25 → N17 → N09 → N01,42.0,84.0,True,True
+N34,Dijkstra (óptima),N01 → N17 → N26 → N34,24.0,N34 → N26 → N25 → N17 → N09 → N01,34.0,58.0,False,True
+N34,2.ª más corta (Yen),N01 → N02 → N18 → N26 → N34,24.0,N34 → N26 → N33 → N25 → N17 → N09 → N01,42.0,66.0,False,True
+N34,3.ª más corta (Yen),N01 → N17 → N18 → N26 → N34,26.0,N34 → N26 → N25 → N17 → N18 → N10 → N09 → N01,43.0,69.0,False,True
+N40,Actual (hoja de despacho),N01 → N02 → N03 → N04 → N05 → N06 → N07 → N08 → N16 → N24 → N32 → N40,93.0,N40 → N32 → N24 → N16 → N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,93.0,186.0,True,False
+N40,Dijkstra (óptima),N01 → N17 → N25 → N27 → N29 → N31 → N32 → N40,47.0,N40 → N32 → N31 → N29 → N27 → N11 → N10 → N09 → N01,61.0,108.0,False,True
+N40,2.ª más corta (Yen),N01 → N17 → N25 → N27 → N29 → N31 → N39 → N40,51.0,N40 → N39 → N38 → N37 → N29 → N27 → N11 → N10 → N09 → N01,61.0,112.0,False,True
+N40,3.ª más corta (Yen),N01 → N09 → N17 → N25 → N27 → N29 → N31 → N32 → N40,54.0,N40 → N32 → N31 → N29 → N27 → N11 → N03 → N02 → N01,62.0,116.0,True,True

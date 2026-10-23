@@ -8,7 +8,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from algoritmos import ALGORITMOS, dijkstra, rutas_alternativas, ruta_menos_tramos
+from algoritmos import ALGORITMOS, alternativas_destino
 from grafo import (BODEGA, DESTINOS, RUTAS_ACTUALES, cargar_matriz, construir_grafo,
                    resumen_sentidos, tiempo_ruta, validar_rutas)
 from simulacion import (ESCENARIOS, LIMITE_PUNTUAL, comparar, generar_pedidos, plan_actual,
@@ -138,27 +138,19 @@ with tab_rutas:
 
     st.subheader("Ruta actual vs. alternativas por destino")
     destino = st.selectbox("Destino", DESTINOS)
-    act = RUTAS_ACTUALES[destino]
-    candidatos = {"Actual (hoja de despacho)": (act, list(reversed(act)))}
-    ida_d, _, _ = dijkstra(G, BODEGA, destino)
-    reg_d, _, _ = dijkstra(G, destino, BODEGA)
-    candidatos["Dijkstra (ida y regreso óptimos)"] = (ida_d, reg_d)
-    yen = [p for p in rutas_alternativas(G, BODEGA, destino, 4) if p != ida_d and p != act]
-    if yen:
-        candidatos["2.ª más corta (Yen), regreso invertido"] = (yen[0], list(reversed(yen[0])))
-    bfs = ruta_menos_tramos(G, BODEGA, destino)
-    if bfs and bfs not in (act, ida_d):
-        candidatos["Menos intersecciones (BFS), regreso invertido"] = (bfs, list(reversed(bfs)))
+    candidatos = {n: (ida, reg) for n, ida, reg in alternativas_destino(G, destino)}
     filas = []
     for nombre, (ida, reg) in candidatos.items():
         ti, tr = tiempo_ruta(G, ida), tiempo_ruta(G, reg)
         filas.append({"Alternativa": nombre, "Ida": " → ".join(ida), "Tiempo ida": ti,
                       "Regreso": " → ".join(reg), "Tiempo regreso": tr,
                       "Ciclo": None if ti is None or tr is None else ti + tr,
+                      "Ida invertida válida": tiempo_ruta(G, ida[::-1]) is not None,
                       "Puntual sin espera": None if ti is None else ti + t_descarga <= LIMITE_PUNTUAL})
     df_c = pd.DataFrame(filas)
     st.dataframe(df_c, hide_index=True, width="stretch")
-    st.caption("Tiempo vacío = la ruta usa un tramo inexistente o cerrado.")
+    st.caption("Las alternativas calculan el regreso por separado, porque varias idas no se pueden recorrer "
+               "al revés (calles de un solo sentido). Tiempo vacío = la ruta usa un tramo cerrado.")
     st.plotly_chart(figura_grafo(G, POS, {k: v[0] for k, v in candidatos.items()}, cerrados, False, 560),
                     width="stretch")
 

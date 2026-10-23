@@ -1,0 +1,9 @@
+,,Pedidos,Pedidos,Entregas puntuales,Entregas puntuales,% puntual,% puntual,Espera promedio,Espera promedio,Solicitud→entrega promedio,Solicitud→entrega promedio,Utilización,Utilización,Tiempo adicional,Tiempo adicional
+,,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+Escenario,Política,,,,,,,,,,,,,,
+Normal,Rutas actuales,31.9,6.3,17.2,5.4,57.0,23.3,19.4,23.0,75.0,22.7,66.8,10.4,179.1,45.0
+Normal,Rutas Dijkstra,31.9,6.3,31.1,6.5,97.6,7.4,3.0,6.3,37.1,6.7,54.6,11.1,86.8,24.8
+Semana Santa,Rutas actuales,46.9,8.7,12.3,5.7,28.6,20.2,82.8,44.7,138.4,46.2,81.5,9.4,314.4,92.2
+Semana Santa,Rutas Dijkstra,46.9,8.7,33.9,9.2,75.3,24.7,21.6,18.2,55.3,18.2,75.6,10.5,112.7,44.8
+Navidad,Rutas actuales,80.6,10.4,8.0,3.6,10.4,6.2,285.7,80.3,341.9,81.6,92.3,2.1,748.0,169.7
+Navidad,Rutas Dijkstra,80.6,10.4,19.0,8.1,24.6,13.8,136.6,50.1,171.2,50.2,90.5,3.0,393.3,100.5

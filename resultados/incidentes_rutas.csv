@@ -1,0 +1,33 @@
+Incidente,Política,Destino,Ida,Tiempo ida,Regreso,Tiempo regreso
+Red original,Rutas actuales,N08,N01 → N02 → N03 → N04 → N05 → N06 → N07 → N08,59.0,N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,59.0
+Red original,Rutas actuales,N19,N01 → N02 → N03 → N11 → N19,33.0,N19 → N11 → N03 → N02 → N01,33.0
+Red original,Rutas actuales,N34,N01 → N09 → N17 → N25 → N33 → N34,42.0,N34 → N33 → N25 → N17 → N09 → N01,42.0
+Red original,Rutas actuales,N40,N01 → N02 → N03 → N04 → N05 → N06 → N07 → N08 → N16 → N24 → N32 → N40,93.0,N40 → N32 → N24 → N16 → N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,93.0
+Red original,Rutas Dijkstra,N08,N01 → N09 → N10 → N11 → N13 → N22 → N23 → N07 → N08,51.0,N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,59.0
+Red original,Rutas Dijkstra,N19,N01 → N02 → N18 → N19,18.0,N19 → N18 → N10 → N09 → N01,24.0
+Red original,Rutas Dijkstra,N34,N01 → N17 → N26 → N34,24.0,N34 → N26 → N25 → N17 → N09 → N01,34.0
+Red original,Rutas Dijkstra,N40,N01 → N17 → N25 → N27 → N29 → N31 → N32 → N40,47.0,N40 → N32 → N31 → N29 → N27 → N11 → N10 → N09 → N01,61.0
+Congestión N01→N17 (8→25 min),Rutas actuales,N08,N01 → N02 → N03 → N04 → N05 → N06 → N07 → N08,59.0,N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,59.0
+Congestión N01→N17 (8→25 min),Rutas actuales,N19,N01 → N02 → N03 → N11 → N19,33.0,N19 → N11 → N03 → N02 → N01,33.0
+Congestión N01→N17 (8→25 min),Rutas actuales,N34,N01 → N09 → N17 → N25 → N33 → N34,42.0,N34 → N33 → N25 → N17 → N09 → N01,42.0
+Congestión N01→N17 (8→25 min),Rutas actuales,N40,N01 → N02 → N03 → N04 → N05 → N06 → N07 → N08 → N16 → N24 → N32 → N40,93.0,N40 → N32 → N24 → N16 → N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,93.0
+Congestión N01→N17 (8→25 min),Rutas Dijkstra,N08,N01 → N09 → N10 → N11 → N13 → N22 → N23 → N07 → N08,51.0,N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,59.0
+Congestión N01→N17 (8→25 min),Rutas Dijkstra,N19,N01 → N02 → N18 → N19,18.0,N19 → N18 → N10 → N09 → N01,24.0
+Congestión N01→N17 (8→25 min),Rutas Dijkstra,N34,N01 → N02 → N18 → N26 → N34,24.0,N34 → N26 → N25 → N17 → N09 → N01,34.0
+Congestión N01→N17 (8→25 min),Rutas Dijkstra,N40,N01 → N09 → N17 → N25 → N27 → N29 → N31 → N32 → N40,54.0,N40 → N32 → N31 → N29 → N27 → N11 → N10 → N09 → N01,61.0
+Cierre N29↔N31,Rutas actuales,N08,N01 → N02 → N03 → N04 → N05 → N06 → N07 → N08,59.0,N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,59.0
+Cierre N29↔N31,Rutas actuales,N19,N01 → N02 → N03 → N11 → N19,33.0,N19 → N11 → N03 → N02 → N01,33.0
+Cierre N29↔N31,Rutas actuales,N34,N01 → N09 → N17 → N25 → N33 → N34,42.0,N34 → N33 → N25 → N17 → N09 → N01,42.0
+Cierre N29↔N31,Rutas actuales,N40,N01 → N02 → N03 → N04 → N05 → N06 → N07 → N08 → N16 → N24 → N32 → N40,93.0,N40 → N32 → N24 → N16 → N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,93.0
+Cierre N29↔N31,Rutas Dijkstra,N08,N01 → N09 → N10 → N11 → N13 → N22 → N23 → N07 → N08,51.0,N08 → N07 → N06 → N05 → N04 → N03 → N02 → N01,59.0
+Cierre N29↔N31,Rutas Dijkstra,N19,N01 → N02 → N18 → N19,18.0,N19 → N18 → N10 → N09 → N01,24.0
+Cierre N29↔N31,Rutas Dijkstra,N34,N01 → N17 → N26 → N34,24.0,N34 → N26 → N25 → N17 → N09 → N01,34.0
+Cierre N29↔N31,Rutas Dijkstra,N40,N01 → N09 → N10 → N11 → N13 → N22 → N23 → N24 → N32 → N40,57.0,N40 → N39 → N38 → N37 → N29 → N27 → N11 → N10 → N09 → N01,61.0
+Cierre N05↔N06,Rutas actuales,N08,N01 → N02 → N03 → N04 → N05 → N14 → N06 → N07 → N08,65.0,N08 → N07 → N06 → N14 → N05 → N04 → N03 → N02 → N01,63.0
+Cierre N05↔N06,Rutas actuales,N19,N01 → N02 → N03 → N11 → N19,33.0,N19 → N11 → N03 → N02 → N01,33.0
+Cierre N05↔N06,Rutas actuales,N34,N01 → N09 → N17 → N25 → N33 → N34,42.0,N34 → N33 → N25 → N17 → N09 → N01,42.0
+Cierre N05↔N06,Rutas actuales,N40,N01 → N02 → N03 → N04 → N05 → N14 → N06 → N07 → N08 → N16 → N24 → N32 → N40,99.0,N40 → N32 → N24 → N16 → N08 → N07 → N06 → N14 → N05 → N04 → N03 → N02 → N01,97.0
+Cierre N05↔N06,Rutas Dijkstra,N08,N01 → N09 → N10 → N11 → N13 → N22 → N23 → N07 → N08,51.0,N08 → N07 → N23 → N22 → N29 → N27 → N11 → N10 → N09 → N01,62.0
+Cierre N05↔N06,Rutas Dijkstra,N19,N01 → N02 → N18 → N19,18.0,N19 → N18 → N10 → N09 → N01,24.0
+Cierre N05↔N06,Rutas Dijkstra,N34,N01 → N17 → N26 → N34,24.0,N34 → N26 → N25 → N17 → N09 → N01,34.0
+Cierre N05↔N06,Rutas Dijkstra,N40,N01 → N17 → N25 → N27 → N29 → N31 → N32 → N40,47.0,N40 → N32 → N31 → N29 → N27 → N11 → N10 → N09 → N01,61.0

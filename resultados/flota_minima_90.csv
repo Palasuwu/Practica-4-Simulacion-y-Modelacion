@@ -1,0 +1,4 @@
+Escenario,Rutas actuales,Rutas Dijkstra
+Normal,nunca (> 24),7
+Semana Santa,nunca (> 24),10
+Navidad,nunca (> 24),15
